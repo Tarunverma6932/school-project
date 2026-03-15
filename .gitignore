@@ -1,0 +1,23 @@
+.DS_Store
+Thumbs.db
+
+# macOS
+**/Icon\r
+
+# Editor folders
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Misc
+*.swp
+*.swo
