@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ABC ERP - Education Management Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0f49bd",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101622",
+              },
+              fontFamily: {
+                "display": ["Public Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-size: 24px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<!-- Navigation Header -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="p-2 bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined fill-1">school</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-primary">ABC ERP</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Attendance</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Grades</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Fees</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Schedule</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+<span class="material-symbols-outlined text-lg">search</span>
+</span>
+<input class="block w-64 rounded-lg border-0 py-1.5 pl-10 bg-slate-100 dark:bg-slate-800 focus:ring-2 focus:ring-primary text-sm" placeholder="Search records..." type="text"/>
+</div>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary/10 border border-primary/20 overflow-hidden" data-alt="Student profile avatar placeholder">
+<img alt="Profile" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSGmdXLiYVjCeZR3biQETkSqdfGEx3rydG9e0LVMc5NELj2seuPoQJshFS2hWXpSg3h3LST8IMkoYICjK2lMkZ4INDgNfs5IB3doQ-KeZtbSPArhmf0PBrecaV2TmNLcKJc3lEW8dhLfQM8M3ELBMoWxMLZe1YVdcvKkv76x-RPS6MN9jUz1_8Q4jz-QCVAdMQygmXotBQrYRoaTjSLqHIa8V1sCy6FuMmLMKab5OVEaFM-uyRWq-yOJBTYXYvv3XccI1znraxPXrS"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Welcome Section -->
+<div class="mb-8">
+<h2 class="text-3xl font-black text-slate-900 dark:text-slate-50 tracking-tight">Welcome back, Aryan</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-1">Class 10-C • Roll No: 24 • Last login: Today, 08:30 AM</p>
+</div>
+<!-- Key Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Attendance</span>
+<span class="p-2 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-lg">
+<span class="material-symbols-outlined">event_available</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold">94%</span>
+<span class="text-sm font-medium text-green-600">+2.4% from last month</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-2 mt-4 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-[94%]"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Current GPA</span>
+<span class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined">grade</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold">3.82</span>
+<span class="text-sm font-medium text-red-500">-0.05 from Mid-terms</span>
+</div>
+<p class="text-xs text-slate-400 mt-4">Top 5% of your class</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Outstanding Fees</span>
+<span class="p-2 bg-orange-100 dark:bg-orange-900/30 text-orange-600 rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold">₹0.00</span>
+<span class="text-sm font-medium text-slate-500">All cleared</span>
+</div>
+<button class="mt-4 text-sm font-semibold text-primary hover:underline">View Receipt History</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Academic Performance & Timeline -->
+<div class="lg:col-span-2 space-y-8">
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold">Recent Academic Performance</h3>
+<button class="text-primary text-sm font-semibold">View All Grades</button>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50">
+<tr>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 uppercase">Subject</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 uppercase">Assessment</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 uppercase">Grade</th>
+<th class="px-6 py-4 text-xs font-semibold text-slate-500 uppercase text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined text-lg">functions</span>
+</div>
+<span class="font-medium">Advanced Mathematics</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Unit Test 3</td>
+<td class="px-6 py-4 font-bold">A+</td>
+<td class="px-6 py-4 text-right">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">EXCELLENT</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined text-lg">science</span>
+</div>
+<span class="font-medium">Physics Lab</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Practical Exam</td>
+<td class="px-6 py-4 font-bold">B</td>
+<td class="px-6 py-4 text-right">
+<span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded">GOOD</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-yellow-100 dark:bg-yellow-900/40 flex items-center justify-center text-yellow-600">
+<span class="material-symbols-outlined text-lg">translate</span>
+</div>
+<span class="font-medium">English Literature</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm">Term Project</td>
+<td class="px-6 py-4 font-bold">A</td>
+<td class="px-6 py-4 text-right">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">EXCELLENT</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section>
+<h3 class="text-xl font-bold mb-4">Upcoming Schedule</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex-shrink-0 flex flex-col items-center justify-center w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg">
+<span class="text-xs font-bold text-primary">OCT</span>
+<span class="text-lg font-black">28</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Maths Mid-term Final</h4>
+<p class="text-xs text-slate-500">09:00 AM • Main Hall</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex-shrink-0 flex flex-col items-center justify-center w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-lg">
+<span class="text-xs font-bold text-primary">OCT</span>
+<span class="text-lg font-black">30</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Annual Sports Meet</h4>
+<p class="text-xs text-slate-500">08:00 AM • School Grounds</p>
+</div>
+<span class="material-symbols-outlined text-slate-300">chevron_right</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<div class="space-y-6">
+<!-- Quick Actions -->
+<div class="bg-primary text-white p-6 rounded-xl shadow-lg shadow-primary/20">
+<h3 class="text-lg font-bold mb-4">Quick Portal Access</h3>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center gap-2 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">description</span>
+<span class="text-xs">Reports</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-xs">Messages</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">library_books</span>
+<span class="text-xs">Library</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs">Settings</span>
+</button>
+</div>
+</div>
+<!-- Notices -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">campaign</span>
+                        Notice Board
+                    </h3>
+<div class="space-y-4">
+<div class="pb-4 border-b border-slate-100 dark:border-slate-800">
+<span class="text-[10px] font-bold text-primary uppercase">Academic</span>
+<p class="text-sm font-medium mt-1">Winter break announced from Dec 20th.</p>
+<p class="text-xs text-slate-400 mt-1">Posted 2 hours ago</p>
+</div>
+<div class="pb-4 border-b border-slate-100 dark:border-slate-800">
+<span class="text-[10px] font-bold text-orange-500 uppercase">Administration</span>
+<p class="text-sm font-medium mt-1">Bus route #45 delayed due to construction.</p>
+<p class="text-xs text-slate-400 mt-1">Posted yesterday</p>
+</div>
+<div>
+<span class="text-[10px] font-bold text-green-500 uppercase">Events</span>
+<p class="text-sm font-medium mt-1">Science Fair registration now open.</p>
+<p class="text-xs text-slate-400 mt-1">Posted 3 days ago</p>
+</div>
+</div>
+<button class="w-full mt-4 py-2 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                        View All Notices
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Login Modal (Simulated for UI demonstration) -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-background-dark/80 backdrop-blur-sm px-4 hidden">
+<div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-2xl shadow-2xl p-8 border border-slate-200 dark:border-slate-800">
+<div class="text-center mb-8">
+<div class="inline-flex p-3 bg-primary/10 rounded-full text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">lock</span>
+</div>
+<h2 class="text-2xl font-bold">Secure ERP Login</h2>
+<p class="text-slate-500 text-sm mt-2">Access your portal using school credentials</p>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-semibold mb-1">User ID / Email</label>
+<input class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary outline-none" placeholder="Enter ID" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-1">Password</label>
+<input class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent focus:ring-2 focus:ring-primary outline-none" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-xs font-medium">Remember me</span>
+</label>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Forgot Password?</a>
+</div>
+<button class="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all" type="button">
+                    Sign In to Dashboard
+                </button>
+</form>
+<div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-400">ABC Public School Noida Secure Gateway • v2.4.1</p>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-12 border-t border-slate-200 dark:border-slate-800 py-10 bg-white dark:bg-slate-950">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary font-bold">school</span>
+<span class="font-bold text-xl">ABC Public School Noida</span>
+</div>
+<p class="text-slate-500 text-sm max-w-sm">Empowering the next generation of leaders with world-class education and modern digital management systems.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">Help Center</a></li>
+<li><a class="hover:text-primary" href="#">IT Support Ticket</a></li>
+<li><a class="hover:text-primary" href="#">ERP Manual</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Contact</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary" href="#">admin@zenithschool.edu</a></li>
+<li><a class="hover:text-primary" href="#">+91 1800-ZENITH</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-100 dark:border-slate-900 gap-4">
+<p class="text-xs text-slate-400">© 2024 Zenith Educational Systems. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-400 hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

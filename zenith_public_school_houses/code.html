@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f49bd",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs><clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">ABC Public School Noida</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="../zenith_public_school_home/code.html">Home</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Academics</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Houses</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="../zenith_public_school_clubs/code.html">Gallery</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl px-3 py-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 md:w-48 placeholder-slate-400" placeholder="Search school info..."/>
+</div>
+<a href="../zenith_erp_login_1/code.html" class="hidden sm:flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold transition-all hover:opacity-90">
+                ERP LOGIN
+            </a>
+<button class="bg-primary text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-primary/90 transition-all shadow-md">
+                Contact Us
+            </button>
+</div>
+</header>
+<main class="max-w-6xl mx-auto w-full px-6 py-12">
+<!-- Hero Section -->
+<div class="mb-12">
+<h1 class="text-slate-900 dark:text-slate-100 text-5xl font-black tracking-tight mb-4">School Houses</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl leading-relaxed">
+                Our house system fosters a sense of belonging, healthy competition, and leadership. Every student is part of one of our four elemental houses, working together to earn points through academics, sports, and arts.
+            </p>
+</div>
+<!-- House Selection Tabs -->
+<div class="border-b border-slate-200 dark:border-slate-800 mb-10 overflow-x-auto">
+<div class="flex gap-10 whitespace-nowrap">
+<button class="border-b-4 border-primary text-primary pb-4 font-bold text-lg px-2">Agni (Fire)</button>
+<button class="border-b-4 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 pb-4 font-bold text-lg px-2 transition-all">Jal (Water)</button>
+<button class="border-b-4 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 pb-4 font-bold text-lg px-2 transition-all">Prithvi (Earth)</button>
+<button class="border-b-4 border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-100 pb-4 font-bold text-lg px-2 transition-all">Vayu (Air)</button>
+</div>
+</div>
+<!-- Active House Dashboard (Agni Example) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- House Profile Card -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col md:flex-row gap-8 items-start">
+<div class="w-40 h-40 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center shrink-0 border-4 border-orange-500/20">
+<span class="material-symbols-outlined text-orange-600 text-7xl">local_fire_department</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 text-xs font-bold uppercase tracking-wider rounded-full">Current Leaders</span>
+<span class="text-slate-400">•</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium italic">"Rise from the Ashes"</span>
+</div>
+<h2 class="text-4xl font-extrabold mb-4">Agni House</h2>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">person</span>
+<p class="text-slate-700 dark:text-slate-300 font-medium">House Master: <span class="font-bold text-slate-900 dark:text-slate-100 ml-1">Mr. Rajesh Sharma</span></p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">military_tech</span>
+<p class="text-slate-700 dark:text-slate-300 font-medium">House Captain: <span class="font-bold text-slate-900 dark:text-slate-100 ml-1">Aryan Malhotra</span></p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">groups</span>
+<p class="text-slate-700 dark:text-slate-300 font-medium">Total Members: <span class="font-bold text-slate-900 dark:text-slate-100 ml-1">342 Students</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Achievements & Activities -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Activities -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<h3 class="text-xl font-bold mb-5 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">event_note</span>
+                            Upcoming Activities
+                        </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-4 p-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors">
+<div class="bg-primary/10 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">sports_basketball</span>
+</div>
+<div>
+<p class="font-bold text-sm">Inter-House Basketball</p>
+<p class="text-xs text-slate-500">Friday, Oct 24th • Sports Complex</p>
+</div>
+</li>
+<li class="flex items-start gap-4 p-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors">
+<div class="bg-primary/10 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div>
+<p class="font-bold text-sm">Debate Championship</p>
+<p class="text-xs text-slate-500">Monday, Oct 27th • Main Auditorium</p>
+</div>
+</li>
+<li class="flex items-start gap-4 p-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-colors">
+<div class="bg-primary/10 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div>
+<p class="font-bold text-sm">Wall Painting Competition</p>
+<p class="text-xs text-slate-500">Wednesday, Nov 2nd • Arts Block</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Achievements -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<h3 class="text-xl font-bold mb-5 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">emoji_events</span>
+                            Recent Achievements
+                        </h3>
+<div class="space-y-4">
+<div class="p-4 bg-primary/5 border border-primary/10 rounded-xl">
+<div class="flex justify-between items-center mb-1">
+<p class="font-bold text-primary text-sm uppercase">Winner</p>
+<span class="text-xs text-slate-500">2 weeks ago</span>
+</div>
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Annual Science Fair 2023</p>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl">
+<div class="flex justify-between items-center mb-1">
+<p class="font-bold text-slate-600 dark:text-slate-400 text-sm uppercase">Runner Up</p>
+<span class="text-xs text-slate-500">1 month ago</span>
+</div>
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-200">Inter-House Swimming Gala</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Points & Leaderboard Sidebar -->
+<div class="flex flex-col gap-6">
+<!-- House Points Card -->
+<div class="bg-primary text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-primary-foreground/80 text-sm font-bold uppercase tracking-widest mb-2 opacity-80">House Standings</p>
+<p class="text-5xl font-black mb-1">1,250</p>
+<p class="text-lg font-medium opacity-90 mb-6">Total House Points</p>
+<div class="flex items-center gap-2 bg-white/20 w-fit px-3 py-1 rounded-full text-xs font-bold">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+                            +45 pts this week
+                        </div>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-9xl opacity-10 rotate-12">monitoring</span>
+</div>
+<!-- Rankings -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<h3 class="text-lg font-bold mb-4">Overall Leaderboard</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border-l-4 border-orange-500">
+<div class="flex items-center gap-3">
+<span class="font-black text-slate-900 dark:text-slate-100 w-4">1</span>
+<p class="font-bold">Agni</p>
+</div>
+<p class="font-black text-primary">1,250</p>
+</div>
+<div class="flex items-center justify-between p-3 border-l-4 border-blue-500">
+<div class="flex items-center gap-3">
+<span class="font-black text-slate-400 w-4">2</span>
+<p class="font-bold">Jal</p>
+</div>
+<p class="font-black text-slate-600 dark:text-slate-400">1,120</p>
+</div>
+<div class="flex items-center justify-between p-3 border-l-4 border-green-500">
+<div class="flex items-center gap-3">
+<span class="font-black text-slate-400 w-4">3</span>
+<p class="font-bold">Prithvi</p>
+</div>
+<p class="font-black text-slate-600 dark:text-slate-400">980</p>
+</div>
+<div class="flex items-center justify-between p-3 border-l-4 border-sky-400">
+<div class="flex items-center gap-3">
+<span class="font-black text-slate-400 w-4">4</span>
+<p class="font-bold">Vayu</p>
+</div>
+<p class="font-black text-slate-600 dark:text-slate-400">845</p>
+</div>
+</div>
+</div>
+<!-- House Captain Profile -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm text-center">
+<div class="w-20 h-20 mx-auto bg-cover bg-center rounded-full mb-4 border-2 border-primary" data-alt="Student profile photo of house captain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDfIw5xKvw-fDMMzG2Vwtg3VO8sQMT4L0zVnenEfg-Mzs3wbO6JMARkNkGaIluuC6zvFWrOwIVD3Qg-QZAZUp5IkL6kzO9AOn2jED7VD8RA3T19VY7mCHGn39v4bYd1bMsABbpd8uhrrgCuDADTrYATbBySS1qWw-6N3scfi945gxG7G_G3gTud3sCpW50MjibI2FM6BNGddbO_XJY_H0gU18zdMHCm7Cxij-teVKdNfN-_9RTRnS-LvpMBJO17fHdDF5cLC73WtSJ")'></div>
+<p class="font-bold text-lg">Aryan Malhotra</p>
+<p class="text-primary text-sm font-semibold mb-3">House Captain</p>
+<p class="text-xs text-slate-500 leading-relaxed italic">"Leading Agni to victory through discipline and passion."</p>
+</div>
+</div>
+</div>
+<!-- House Gallery Section -->
+<div class="mt-20">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl font-bold mb-2">Life in Agni House</h2>
+<p class="text-slate-500">Moments of teamwork and triumph</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                    View Full Gallery <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square rounded-xl bg-cover bg-center shadow-sm" data-alt="Students participating in a group activity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwtRBvBEsFWzx0S8YUG41RgHPdU-M6sWDDxAhYhUyqXKfwycAGkN7d8trFXhdgqPzAGygxQ1m_SRHRHhij9QHXTTVNMugPhEKvzOhVMs19LA8oHMTpdd2Dn3FF1kDAkxIJEI7009HkQI_946x0bAQPwEMCNwLKBatFBthTOrXVOiLSDbQ5TGmxID7mSIB2nV7NprCFYjMpVhgsNcHLMgHWmgeKv7pVyhWJkLKtgMQ_Ic-YPWEgpdvgyPbOmXWdcQ3C9958de9TqefG")'></div>
+<div class="aspect-square rounded-xl bg-cover bg-center shadow-sm" data-alt="House team celebrating a victory" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAXj8e0Kq3OTfYkUibeMtomoSLoXJQNQM6PWLNNnPvIBv9xKfH_PeUY2I5TYRQhNCmE5GEaj7JPPY2QX-2q5zIYnBLNyqIViaRRfLCQSS9znnZWYkJqwQKxbZe2-hACiNY7bSk5qrHcatj8MGifQNPjsUfrT0Q_D4sI3spylNgY3q8rOCBORrlMCRODO_p4x9X2Zpci5m300ejMjkLf4fvvrsuZhaQM8I4dY-09BmyHl8GTj11z1sUYs0jGWXutswbbMNy0go1CFow")'></div>
+<div class="aspect-square rounded-xl bg-cover bg-center shadow-sm" data-alt="Agni house sports team photo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBT4e0JlOwT1hrKasEE4qKlqJpNzOM7-vzWcQZSKq4GG7bKSMkTSAvrs_7LdEMdZ4UF-gBRPEMCH4_4kltbVA0pIZLWIVottyPwNtQZEiWUcyi7hELT6awkfY1Ob9wIn7qKNhIMm325m2T-K9dpCL0F60WzuoiGvscCEsCmQc1PgQ7mP_Y2Mpg2eaoR1jo0D3M6Vht9EdFqsDqIrbXl5kqoDyir32hHqD9oN3Jw_nMAc06otPP7rFap4E0LSiUVdpwIPY2Qku5eNJ2M")'></div>
+<div class="aspect-square rounded-xl bg-cover bg-center shadow-sm" data-alt="Close up of school trophy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGEUYo33SyXdfVeydtuTzklIbmQyx-HwhbqdQNHlyzTnBGjCd3zueRJ4GOED7l7JqTOaruSoXuWoLoJWe3ZNY3juprRRmLzZIO9-QsNs2DGNMZKKa0F7ffSma9mWxgziIFhShzdaG6NXc3SVcuqH0UhhkM0uKDgVihlYBG4fEBc-NqjC0-NcERAh-joF_zHE_da3K4sg-_kyLKkt2PDzsCFH1jos0neImh7RUik8wcj5eTvXAttL2ZjE5H0kvvReZuJysnaOzjbf41")'></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-16 px-10">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 text-white mb-6">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold">ABC Public</h3>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    Nurturing tomorrow's leaders through excellence in education, character building, and community spirit.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Admission Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">School Calendar</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Fee Structure</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Resources</h4>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Student Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Parent Handbook</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">E-Library</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Alumni Network</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Visit Us</h4>
+<p class="text-slate-400 text-sm mb-4">
+                    123 Academic Drive, Knowledge City,<br/>
+                    State - 456789
+                </p>
+<div class="bg-slate-800 h-32 w-full rounded-xl overflow-hidden grayscale opacity-60">
+<div class="w-full h-full bg-slate-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">map</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-6xl mx-auto border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs gap-4">
+<p>© 2024 ABC Public School Noida. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-slate-300" href="#">Privacy Policy</a>
+<a class="hover:text-slate-300" href="#">Terms of Service</a>
+<a class="hover:text-slate-300" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
